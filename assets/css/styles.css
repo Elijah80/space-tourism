@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+:root {
+	--Charcoal: rgb(11, 13, 23);
+	--LightGray: rgb(208, 214, 249);
+	--White: rgb(255, 255, 255);
+	--Bellefair: 'Bellefair', serif;
+	--Barlow: 'Barlow Condensed', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--Charcoal);
+	color: var(--White);
+	font-family: var(--Barlow);
+	height: 100vh;
+	width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+.subheading-1 {
+	font-family: var(--Bellefair);
+}
+
+h1 {
+	font-size: 9.375rem;
+}
+
+h2 {
+	font-size: 6.25rem;
+}
+
+h3 {
+	font-size: 3.5rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5,
+.subheading-2,
+.nav-text {
+	font-family: var(--Barlow);
+}
+
+h5 {
+	color: var(--LightGray);
+	letter-spacing: 4.75px;
+}
+
+h5,
+.subheading-1 {
+	font-size: 1.75rem;
+}
+
+.subheading-2 {
+	font-size: 0.875rem;
+	letter-spacing: 2.35px;
+}
+
+.nav-text {
+	font-size: 1rem;
+	letter-spacing: 2.7px;
+}
