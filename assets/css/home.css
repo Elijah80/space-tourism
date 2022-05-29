@@ -87,6 +87,16 @@ h5,
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
+.nav-menu {
+	display: none;
+}
+
+.logo {
+	display: block;
+	margin-left: 39px;
+	margin-top: 24px;
+}
+
 .nav-items a {
 	color: var(--White);
 	text-decoration: none;
@@ -122,6 +132,10 @@ h5,
 }
 
 .hidden {
+	display: none;
+}
+
+.desktop-line {
 	display: none;
 }
 
@@ -210,16 +224,6 @@ h5,
 		text-align: center;
 	}
 
-	.nav-menu {
-		display: none;
-	}
-
-	.logo {
-		display: block;
-		margin-left: 39px;
-		margin-top: 24px;
-	}
-
 	.nav-close,
 	.nav-number {
 		display: none;
@@ -265,5 +269,79 @@ h5,
 	}
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1281px) {
+	.container {
+		background-image: url('../images/background/home/desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		text-align: left;
+	}
+
+	.nav-close {
+		display: none;
+	}
+
+	.nav-items {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 830px;
+		height: 96px;
+	}
+
+	.nav-items ul {
+		margin-top: 39px;
+		text-align: center;
+	}
+
+	.nav-item {
+		display: inline;
+		padding: 0 48px;
+	}
+
+	.nav-number {
+		font-weight: 900;
+	}
+
+	.active > a {
+		border-bottom: 4px solid var(--White);
+		padding-bottom: 27px;
+	}
+
+	.desktop-line {
+		display: block;
+		color: var(--LightGray);
+		width: 473px;
+		opacity: 0.25;
+		position: relative;
+		left: 167px;
+		top: -21px;
+		z-index: 1;
+	}
+
+	.heading1 {
+		margin-top: 387px;
+		margin-left: 165.5px;
+		margin-bottom: 48px;
+	}
+
+	.heading2 {
+		margin-left: 165.5px;
+	}
+
+	.description {
+		width: 444px;
+		margin-left: 165.5px;
+		margin-top: 48px;
+	}
+
+	.explore-btn {
+		position: absolute;
+		right: 165px;
+		top: 495px;
+	}
 }
