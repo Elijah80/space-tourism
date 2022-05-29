@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
 :root {
-	--Charcoal: rgb(11, 13, 23);
-	--LightGray: rgb(208, 214, 249);
-	--White: rgb(255, 255, 255);
+	--Charcoal: rgba(11, 13, 23, 1);
+	--LightGray: rgba(208, 214, 249, 1);
+	--White: rgba(255, 255, 255, 1);
 	--Bellefair: 'Bellefair', serif;
 	--Barlow: 'Barlow Condensed', sans-serif;
 }
@@ -24,6 +24,10 @@ body {
 	overflow-x: hidden;
 	height: 100vh;
 	width: 100vw;
+}
+
+.container {
+	text-align: center;
 }
 
 h1,
@@ -83,13 +87,27 @@ h5,
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
+.nav-items a {
+	color: var(--White);
+	text-decoration: none;
+}
+
+.nav-item {
+	list-style: none;
+}
+
+.heading1,
+.heading2 {
+	text-transform: uppercase;
+}
+
 .space-image {
 	display: block;
 }
 
 .explore-btn {
 	background-color: var(--White);
-	border: 1px solid var(--White);
+	border: none;
 	border-radius: 100%;
 	color: var(--Charcoal);
 	font-family: var(--Bellefair);
@@ -100,16 +118,11 @@ h5,
 }
 
 .explore-btn:hover {
-	border-color: rgba(0, 0, 0, 0.5);
-	border-width: 40px;
+	border: 40px solid rgba(11, 13, 23, 0.3);
 }
 
 .hidden {
 	display: none;
-}
-
-.active {
-	border-bottom: 2px solid var(--White);
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -119,10 +132,7 @@ h5,
 	}
 }
 
-@media screen and (max-width: 550px) {
-	.container {
-		text-align: center;
-	}
+@media screen and (max-width: 539px) {
 	/* TODO: hide .nav-menu on bigger screens */
 	.nav-menu {
 		display: block;
@@ -145,18 +155,12 @@ h5,
 		right: 26px;
 	}
 
-	.nav-link {
-		list-style: none;
+	.nav-item {
 		margin-bottom: 32px;
 	}
 
 	.nav-number {
 		font-weight: 900;
-	}
-
-	.nav-items a {
-		color: var(--White);
-		text-decoration: none;
 	}
 
 	.nav-items ul {
@@ -178,11 +182,6 @@ h5,
 		margin-left: 24px;
 	}
 
-	.heading1,
-	.heading2 {
-		text-transform: uppercase;
-	}
-
 	.heading2 {
 		margin: 48px auto;
 	}
@@ -196,4 +195,75 @@ h5,
 		content: url('../images/background/home/mobile.jpg');
 		width: 100%;
 	}
+
+	.active {
+		border-right: 4px solid var(--White);
+	}
+}
+
+@media screen and (min-width: 540px) and (max-width: 1280px) {
+	.container {
+		background-image: url('../images/background/home/tablet.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100vw;
+		text-align: center;
+	}
+
+	.nav-menu {
+		display: none;
+	}
+
+	.logo {
+		display: block;
+		margin-left: 39px;
+		margin-top: 24px;
+	}
+
+	.nav-close,
+	.nav-number {
+		display: none;
+	}
+
+	.nav-items {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 450px;
+		height: 96px;
+	}
+
+	.nav-items ul {
+		margin-top: 39px;
+	}
+
+	.nav-item {
+		display: inline;
+		padding: 0 15px;
+	}
+
+	.active > a {
+		border-bottom: 4px solid var(--White);
+		padding-bottom: 27px;
+	}
+
+	.heading1 {
+		margin-top: 202px;
+		margin-bottom: 48px;
+	}
+
+	.description {
+		width: 444px;
+		margin: 48px auto;
+		color: var(--LightGray);
+	}
+
+	.explore-btn {
+		margin-top: 156px;
+		margin-bottom: 90px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
 }
